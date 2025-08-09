@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package kernel.netns;
+
+import "google/protobuf/empty.proto";
+
+message Netns {
+  // If unset the netns is the default one
+  optional string name = 1;
+}
+
+message NetnsList { repeated Netns list = 1; }
+
+// NetnsService
+service NetnsService {
+  rpc WatchNetns(google.protobuf.Empty) returns (stream NetnsList) {}
+}
