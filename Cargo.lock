@@ -712,6 +712,20 @@ name = "networker-bgp"
 version = "0.1.0"
 dependencies = [
  "prost",
+ "thiserror 2.0.12",
+ "tokio",
+ "tonic",
+ "tonic-build",
+ "tracing",
+ "tracing-subscriber",
+]
+
+[[package]]
+name = "networker-filter-map"
+version = "0.1.0"
+dependencies = [
+ "prost",
+ "thiserror 2.0.12",
  "tokio",
  "tonic",
  "tonic-build",
