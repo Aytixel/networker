@@ -1,12 +1,10 @@
 use std::sync::Arc;
 
 use futures::StreamExt;
+use netns::{Netns, NetnsWatcher, NetnsWatcherStream};
 use tonic::Response;
 
-use crate::{
-    api::{Error, ResponseStream},
-    sys::netns::{Netns, NetnsWatcher, NetnsWatcherStream},
-};
+use crate::api::{Error, ResponseStream};
 
 mod proto {
     tonic::include_proto!("kernel.netns");

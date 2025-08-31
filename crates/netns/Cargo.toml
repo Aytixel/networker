@@ -1,0 +1,20 @@
+[package]
+name = "netns"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+thiserror = "2"
+
+tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
+tokio-util = "0.7"
+futures = "0.3"
+
+tracing = "0.1"
+
+nix = { version = "0.30", default-features = false, features = [
+    "dir",
+    "fs",
+    "sched",
+] }
+notify = "6"

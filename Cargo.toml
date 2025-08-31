@@ -1,3 +1,8 @@
 [workspace]
 resolver = "2"
-members = ["daemons/bgp", "daemons/filter-map", "daemons/kernel"]
+members = [
+    "crates/netns",
+    "daemons/bgp",
+    "daemons/filter-map",
+    "daemons/kernel",
+]
