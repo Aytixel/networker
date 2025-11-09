@@ -3,6 +3,6 @@ resolver = "2"
 members = [
     "crates/netns",
     "daemons/bgp",
-    "daemons/filter-map",
+    "daemons/rib",
     "daemons/kernel",
 ]
